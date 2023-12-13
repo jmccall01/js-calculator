@@ -1,0 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgba(60, 65, 80, 0.521);
+}
+
+.heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20pt;
+  margin-top: 40px;
+}
+
+.calculator {
+  background-color: rgba(0, 0, 0);
+  color: white;
+  height: 260px;
+  width: 200px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.calc-component, .display{
+  height: 20px;
+  text-align: right;
+  margin-right: 2px;
+  font-family: VT323;
+}
+
+.calc-component {
+  color: orange;
+}
+
+.display {
+  font-size: 22px;
+}
+
+.input-grid {
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: 
+  "clear clear div times"
+  "seven eight nine subtract"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals"
+  ;
+  
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  background-color: rgb(85, 85, 85);
+  border: 1px solid black;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.clear {
+  background-color: rgb(160, 0, 0);;
+}
+
+.equals {
+  background-color: rgb(1, 1, 102);
+}
+
+.divide, .multiply, .subtract, .add {
+  background-color: grey;
+}
